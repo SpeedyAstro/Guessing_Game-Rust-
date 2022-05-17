@@ -22,7 +22,7 @@ fn main() { // entry point of program the "main func"
 //      let guess: u32 = guess.trim().parse().expect("Please type your number!"); //trim removes the spaves and new line character
         let guess: u32 = match guess.trim().parse(){
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => continue, // if error throws out, it didn't kill the program
         };
     // whereas parse method parses the string into some kind of number
     // parse method will only work on character that logically converted into the numbers 
